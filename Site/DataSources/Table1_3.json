@@ -1,0 +1,18 @@
+[
+  {
+    "Data": "[{\"Password\":\"mailto:Gopika@123\",\"Password@display\":\"Gopika@123\",\"UserName\":\"Gopika\"},{\"Password\":\"mailto:Suchi@123\",\"Password@display\":\"Suchi@123\",\"UserName\":\"Suchi\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Table1_3",
+    "OrderedColumnNames": [
+      "UserName",
+      "Password",
+      "Password@display"
+    ],
+    "OriginalName": "Table1",
+    "OriginalSchema": "*[Password:h, 'Password@display':s, UserName:s]",
+    "Schema": "*[Password:h, 'Password@display':s, UserName:s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

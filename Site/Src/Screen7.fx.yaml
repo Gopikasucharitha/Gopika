@@ -1,0 +1,295 @@
+"Screen7 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =88
+        Size: =27
+        Text: ="Regular Site Inspection"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =1048
+        Width: =640
+        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =1815
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label6 As label:
+                Height: =70
+                Size: =29
+                Text: ="Title "
+                Width: =560
+                X: =6
+                ZIndex: =1
+
+            TextInput3 As text:
+                Default: |
+                    =""
+                Height: =80
+                Size: =21
+                Width: =616
+                X: =6
+                Y: =74
+                ZIndex: =2
+
+            Label6_1 As label:
+                Height: =70
+                Size: =29
+                Text: ="Sub Title "
+                Width: =560
+                X: =6
+                Y: =179
+                ZIndex: =3
+
+            TextInput3_1 As text:
+                Default: =""
+                Height: =75
+                Size: =21
+                Width: =616
+                X: =6
+                Y: =268
+                ZIndex: =4
+
+            Label6_2 As label:
+                Height: =70
+                Size: =29
+                Text: ="No.Of people working"
+                Width: =560
+                X: =6
+                Y: =355
+                ZIndex: =5
+
+            Label6_3 As label:
+                Height: =70
+                Size: =29
+                Text: ="Task in progress?"
+                Width: =560
+                X: =6
+                Y: =586
+                ZIndex: =6
+
+            TextInput3_3 As text:
+                Default: =""
+                Height: =77
+                Size: =21
+                Width: =601
+                X: =3
+                Y: =458
+                ZIndex: =8
+
+            Radio1 As radio:
+                Height: =90
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =60
+                Size: =20
+                Width: =509
+                Y: =672
+                ZIndex: =9
+
+            Label6_4 As label:
+                Height: =70
+                Size: =29
+                Text: ="Safety Obervation?"
+                Width: =560
+                Y: =768
+                ZIndex: =10
+
+            Radio1_1 As radio:
+                Height: =92
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =60
+                Size: =20
+                Width: =461
+                Y: =864
+                ZIndex: =11
+
+            Label6_5 As label:
+                Height: =70
+                Size: =29
+                Text: ="Notes"
+                Width: =560
+                Y: =1135
+                ZIndex: =12
+
+            Label6_6 As label:
+                Height: =70
+                Size: =29
+                Text: ="Equipments Required?"
+                Width: =560
+                Y: =956
+                ZIndex: =13
+
+            Radio1_2 As radio:
+                Height: =92
+                Items: =["Yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =60
+                Size: =20
+                Width: =461
+                Y: =1043
+                ZIndex: =14
+
+            TextInput4 As text:
+                Default: =""
+                Height: =84
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =622
+                Y: =1221
+                ZIndex: =15
+
+            Label6_7 As label:
+                Height: =70
+                Size: =29
+                Text: ="Description"
+                Width: =560
+                X: =3
+                Y: =1316
+                ZIndex: =16
+
+            TextInput4_1 As text:
+                Default: =""
+                Height: =184
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =619
+                X: =3
+                Y: =1407
+                ZIndex: =17
+
+            Label6_8 As label:
+                Height: =70
+                Size: =29
+                Text: ="Enter Site Address"
+                Width: =560
+                Y: =1591
+                ZIndex: =18
+
+            TextInput4_2 As text:
+                Default: =""
+                Height: =119
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =622
+                Y: =1678
+                ZIndex: =19
+
+        DataCard5 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =294
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =3
+
+            Label2 As label:
+                Height: =105
+                Size: =23
+                Text: ="Add Images"
+                Width: =625
+                Y: =2
+                ZIndex: =1
+
+            "Gallery10 As gallery.'BrowseLayout_Vertical_OneImageThreeColumnVariant_ver4.0'":
+                Height: =177
+                Items: =site1
+                Layout: =Layout.Vertical
+                TemplatePadding: =4
+                TemplateSize: =Min(208, Self.Height - 60)
+                WrapCount: =3
+                Y: =107
+                ZIndex: =2
+
+                Image16 As image:
+                    Height: =60
+                    Image: =ThisItem.Url
+                    ImagePosition: =ImagePosition.Fill
+                    OnSelect: =Select(Parent)
+                    Width: =200
+                    ZIndex: =1
+
+            Camera2 As camera:
+                Camera: =0
+                Height: =105
+                OnSelect: =Collect(site1,Camera2.Photo)
+                Width: =255
+                X: =385
+                Y: =2
+                ZIndex: =3
+
+        DataCard7 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =4
+
+            Button1_6 As button:
+                Height: =70
+                OnSelect: =Navigate(Screen5,ScreenTransition.Fade)
+                Size: =24
+                Text: ="Cancel"
+                Width: =280
+                X: =8
+                Y: =30
+                ZIndex: =1
+
+            Button1_7 As button:
+                Height: =70
+                OnSelect: |-
+                    =Collect(site,{Title:TextInput3.Text,SubTitle:TextInput3_1.Text,NO_Of_people_working:TextInput3_3.Text,Task_in_progress:Radio1.Selected,Safety_observation:Radio1_1.Selected,Equipments_Required:Radio1_2.Selected,Notes:TextInput4.Text,Description:TextInput4_1.Text,Enter_Site_Address:TextInput4_2.Text,Add_Images:Camera2.Photo});
+                    
+                    Navigate(Screen5);
+                    
+                    Office365Outlook.SendEmail(User().Email,"site Inspection submitted","Thank you");
+                Size: =24
+                Text: ="Submit"
+                Width: =280
+                X: =315
+                Y: =30
+                ZIndex: =2
+
+    Icon4 As icon.Home:
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Screen1,ScreenTransition.Fade)
+        X: =17
+        Y: =12
+        ZIndex: =4
+
+    Icon8 As icon.NextArrow:
+        Icon: =Icon.NextArrow
+        OnSelect: =Navigate(Screen6,ScreenTransition.Fade)
+        X: =560
+        Y: =12
+        ZIndex: =5
+

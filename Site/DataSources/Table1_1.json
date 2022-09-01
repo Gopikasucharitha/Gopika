@@ -1,0 +1,16 @@
+[
+  {
+    "Data": "[{\"Column1\":\"Monthly Inspection\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Table1_1",
+    "OrderedColumnNames": [
+      "Column1"
+    ],
+    "OriginalName": "Table1",
+    "OriginalSchema": "*[Column1:s]",
+    "Schema": "*[Column1:s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

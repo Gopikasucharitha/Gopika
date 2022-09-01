@@ -1,0 +1,270 @@
+"Screen10 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar3 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =1055
+        Width: =640
+        Y: =78
+        ZIndex: =3
+
+        DataCard3 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =2195
+            Visible: =true
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label5 As label:
+                Height: =95
+                Size: =29
+                Text: ="Whether the site is Clean and have Electrical Items?"
+                Width: =607
+                X: =15
+                Y: =22
+                ZIndex: =1
+
+            Label5_2 As label:
+                Height: =133
+                Size: =29
+                Text: ="Emergency Preparedness & First Aid Box are available?"
+                Width: =587
+                X: =15
+                Y: =348
+                ZIndex: =3
+
+            Label5_4 As label:
+                Height: =102
+                Size: =29
+                Text: ="Fire Existing Equipments is available?"
+                Width: =560
+                X: =15
+                Y: =685
+                ZIndex: =5
+
+            Radio2 As radio:
+                Height: =76
+                Items: =["yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =427
+                X: =15
+                Y: =139
+                ZIndex: =7
+
+            Label5_7 As label:
+                Height: =137
+                Size: =29
+                Text: ="Personal Protection Kits are available for labours?"
+                Width: =581
+                X: =21
+                Y: =992
+                ZIndex: =11
+
+            Radio2_2 As radio:
+                Height: =71
+                Items: =["yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =427
+                X: =15
+                Y: =481
+                ZIndex: =12
+
+            Radio2_5 As radio:
+                Height: =76
+                Items: =["yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =427
+                X: =15
+                Y: =805
+                ZIndex: =15
+
+            Radio2_7 As radio:
+                Height: =71
+                Items: =["yes","No"]
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =427
+                X: =27
+                Y: =1135
+                ZIndex: =17
+
+            TextInput7 As text:
+                Default: =""
+                Height: =75
+                HintText: ="Add Details"
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Visible: =If(Radio2.Selected.Value="No",true,false)
+                Width: =590
+                X: =15
+                Y: =238
+                ZIndex: =18
+
+            TextInput9 As text:
+                Default: =""
+                Height: =71
+                HintText: ="Add Details"
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Visible: =If(Radio2_2.Selected.Value="No",true,false)
+                Width: =590
+                X: =20
+                Y: =579
+                ZIndex: =20
+
+            TextInput12 As text:
+                Default: =""
+                Height: =85
+                HintText: ="Add Details"
+                Size: =21
+                Visible: =If(Radio2_5.Selected.Value="No",true,false)
+                Width: =589
+                X: =21
+                Y: =881
+                ZIndex: =22
+
+            TextInput14 As text:
+                Default: =""
+                Height: =79
+                HintText: ="Add Details"
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Visible: =If(Radio2_7.Selected.Value="No",true,false)
+                Width: =578
+                X: =27
+                Y: =1227
+                ZIndex: =24
+
+            Button4 As button:
+                Height: =72
+                Size: =24
+                Text: ="Cancel"
+                Width: =257
+                Y: =2120
+                ZIndex: =42
+
+            Button5 As button:
+                Height: =70
+                OnSelect: |+
+                    =Collect(Msite,{Whether_the_site_is_clean_and_have_electrical_items:Radio2.Selected,Emergency_preparedness_First_Aid_Box:Radio2_2.Selected,Fire_Existing_Equipments_is_available:Radio2_5.Selected,Personal_protection_kits_are_available_for_labours:Radio2_7.Selected,Description:TextInput24.Text,Enter_Site_address:TextInput25.Text,Add_images:Camera3.Photo});
+                    
+                    Navigate(Screen8,ScreenTransition.Fade);
+                    
+                    Office365Outlook.SendEmail(User().Email,"Monthly site Inspection submitted","Thank you")
+                    
+                Size: =24
+                Text: ="Button"
+                Width: =280
+                X: =315
+                Y: =2122
+                ZIndex: =43
+
+            Label9 As label:
+                Height: =70
+                Size: =29
+                Text: ="Description"
+                Width: =560
+                X: =21
+                Y: =1329
+                ZIndex: =44
+
+            TextInput24 As text:
+                Default: =""
+                Height: =92
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =581
+                X: =18
+                Y: =1403
+                ZIndex: =45
+
+            Label10 As label:
+                Height: =85
+                Size: =29
+                Text: ="Enter Site address"
+                Width: =560
+                X: =15
+                Y: =1510
+                ZIndex: =46
+
+            TextInput25 As text:
+                Default: =""
+                Height: =77
+                Mode: =TextMode.MultiLine
+                Size: =21
+                Width: =575
+                X: =20
+                Y: =1595
+                ZIndex: =47
+
+            Label7 As label:
+                Height: =117
+                Size: =21
+                Text: ="Add Images"
+                Width: =332
+                X: =27
+                Y: =1706
+                ZIndex: =48
+
+            "Gallery11 As gallery.'BrowseLayout_Vertical_OneImageThreeColumnVariant_ver4.0'":
+                Height: =210
+                Items: =Site2
+                Layout: =Layout.Vertical
+                TemplatePadding: =4
+                TemplateSize: =Min(208, Self.Height - 60)
+                WrapCount: =3
+                Y: =1840
+                ZIndex: =49
+
+                Image18 As image:
+                    Height: =150
+                    Image: =ThisItem.Url
+                    ImagePosition: =ImagePosition.Fill
+                    OnSelect: =Select(Parent)
+                    Width: =188
+                    ZIndex: =1
+
+            Camera3 As camera:
+                Camera: =0
+                Height: =117
+                OnSelect: =Collect(Site2,Camera3.Photo)
+                Width: =197
+                X: =401
+                Y: =1706
+                ZIndex: =50
+
+    LblAppName1_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =88
+        Size: =27
+        Text: ="Monthly Site Inspection"
+        Width: =Parent.Width
+        ZIndex: =4
+
+    Icon8_1 As icon.NextArrow:
+        Icon: =Icon.NextArrow
+        OnSelect: =Navigate(Screen6,ScreenTransition.Fade)
+        X: =560
+        Y: =12
+        ZIndex: =5
+
